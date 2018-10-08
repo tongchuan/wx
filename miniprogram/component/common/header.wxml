@@ -1,0 +1,3 @@
+<!--component/common/header.wxml-->
+<text>component/common/header.wxml</text>
+<slot></slot>
