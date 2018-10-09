@@ -1,3 +1,11 @@
 <scroll-view scroll-y='true' class='net-warp'>
-<text>333</text>
+<button type='default' bindtap='getDataList'>请求数据</button>
+<text wx:for="{{listData}}" wx:key="{{idx}}" wx:for-index="idx" wx:for-item="itemName">
+{{idx}}、{{itemName.name}}({{itemName.age}})
+</text>
+<button type='primary' data-url='/pages/url/url'
+data-type-id='122222' bindtap='userConsole'>跳转</button>
+<button type='primary' data-url='/pages/url/url'
+data-type-id='122222' bindtap='getUserInfo'>用户</button>
+
 </scroll-view>

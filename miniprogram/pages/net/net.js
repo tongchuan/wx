@@ -1,11 +1,12 @@
 // miniprogram/pages/net/net.js
+import DB from '../../api/netDb.js'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    listData: []
   },
 
   /**
@@ -62,5 +63,48 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  getDataList(){
+    DB.getListData({id:111,g:Math.random()}).then((data)=>{
+      this.setData({
+        listData: data.data
+      })
+    }).catch((error)=>{
+      wx.showModal({
+        title: 'error',
+        content: JSON.stringify(error)
+      })
+    })
+  },
+  userConsole(event){
+    console.log(event.target)
+    console.log(event.currentTarget)
+    let url = event.currentTarget.dataset.url;
+    wx.navigateTo({ url })
+  },
+  getUserInfo(){
+    wx.getUserInfo({
+      withCredentials: false,
+      lang: "zh_CN",
+      success: (res)=>{
+        wx.showModal({
+          title: '',
+          content: JSON.stringify(res),
+        })
+
+      },
+      fail: (res)=>{
+        wx.showModal({
+          title: '',
+          content: JSON.stringify(res),
+        })
+      },
+      complete: (res) => {
+        wx.showModal({
+          title: '',
+          content: JSON.stringify(res),
+        })
+      }
+    })
   }
 })
