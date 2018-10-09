@@ -1,15 +1,15 @@
 {
   "cloud": true,
   "pages": [
-    "pages/user/index",    
+    "pages/net/net",
+    "pages/user/user",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
     "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib",
-    "pages/index",
-    "pages/index/index"
+    "pages/index/index"    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -26,7 +26,7 @@
       {
         "selectedIconPath": "images/u2.png",
         "iconPath": "images/u2.png",
-        "pagePath": "pages/user/index",
+        "pagePath": "pages/user/user",
         "text": "我的"
       },
       {
@@ -34,13 +34,13 @@
         "iconPath": "images/u1.png",
         "pagePath": "pages/index/index",
         "text": "首页"
-      },{
+      },
+      {
         "selectedIconPath": "images/u1.png",
         "iconPath": "images/u1.png",
         "pagePath": "pages/index/index",
         "text": "首页"
       }
-      
     ]
   }
 }
